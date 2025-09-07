@@ -40,7 +40,7 @@ resolve_instance_ids() {
     return
   fi
 
-  aws "${region_flag[@]}" ec2 describe-instances \
+  aws "${region_flag[@]}" ec2 describe-instances 
     --filters \
       "Name=tag:Name,Values=${name}" \
       "Name=instance-state-name,Values=pending,running,stopping,stopped" \
